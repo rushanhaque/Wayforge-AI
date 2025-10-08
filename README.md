@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Wayforge - AI-Powered Learning Pathway Platform
 
 > **Mind-blowing personalized learning experiences tailored to perfection**
@@ -379,3 +380,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [**Try Wayforge Now**](https://wayforge.ai) | [**Documentation**](https://docs.wayforge.ai) | [**Support**](mailto:rushanulhaque@gmail.com)
 
 </div>
+=======
+# Wayforge-AI
+AI-powered personalized learning path generator (prototype)
+>>>>>>> 8d3219f28dea228353b3eaa88ef56ffe5d59d544
