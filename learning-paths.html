@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Learning Paths - Wayforge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="learning-paths.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header header-compact">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <div class="logo-3d">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h1 class="brand-name">Wayforge</h1>
+                    <div class="header-decorative-images">
+                        <div class="floating-icon icon-1"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="floating-icon icon-2"><i class="fas fa-lightbulb"></i></div>
+                        <div class="floating-icon icon-3"><i class="fas fa-rocket"></i></div>
+                        <div class="floating-icon icon-4"><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="brand-tagline">Forge Your Learning Journey</p>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="en">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button data-lang="en">English</button>
+                        <button data-lang="es">Español</button>
+                        <button data-lang="fr">Français</button>
+                        <button data-lang="de">Deutsch</button>
+                    </div>
+                </div>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </button>
+                    <button class="btn btn-primary" id="signupBtn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Sign Up</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="paths-main">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="success-animation">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                <h1 class="hero-title">Your Personalized Learning Paths</h1>
+                <p class="hero-subtitle">Based on your preferences and goals, we've crafted these tailored learning journeys for you</p>
+                
+                <div class="summary-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Curated Paths</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">115</div>
+                        <div class="stat-label">Total Resources</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Hands-on Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label">Certificates</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Paths -->
+        <section class="paths-section">
+            <div class="paths-container" id="pathsContainer">
+                <!-- Paths will be dynamically generated here -->
+            </div>
+        </section>
+
+        <!-- Additional Resources -->
+        <section class="resources-section">
+            <div class="section-header">
+                <h2>Additional Resources & Tools</h2>
+                <p>Enhance your learning journey with these supplementary resources</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card" data-resource="scholarship-tracker">
+                    <div class="resource-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Scholarship Tracker</h3>
+                    <p>Find and track scholarship opportunities relevant to your learning path</p>
+                    <div class="resource-stats">
+                        <span><i class="fas fa-dollar-sign"></i> 50+ Opportunities</span>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-resource="exam-tracker">
+                    <div class="resource-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Exam Tracker</h3>
+                    <p>Keep track of important certification exams and deadlines</p>
+                    <div class="resource-stats">
+                        <span><i class="fas fa-calendar"></i> Smart Reminders</span>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-resource="skill-gap-analysis">
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-gap"></i>
+                    </div>
+                    <h3>Skill Gap Analysis</h3>
+                    <p>Identify areas for improvement and track your progress</p>
+                    <div class="resource-stats">
+                        <span><i class="fas fa-target"></i> Personalized Insights</span>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-resource="mentor-matching">
+                    <div class="resource-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Mentor Matching</h3>
+                    <p>Connect with industry experts and experienced professionals</p>
+                    <div class="resource-stats">
+                        <span><i class="fas fa-users"></i> 500+ Mentors</span>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-resource="study-groups">
+                    <div class="resource-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Study Groups</h3>
+                    <p>Join collaborative learning groups with peers on similar paths</p>
+                    <div class="resource-stats">
+                        <span><i class="fas fa-comments"></i> Active Communities</span>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-resource="progress-analytics">
+                    <div class="resource-icon">
+                        <i class="fas fa-analytics"></i>
+                    </div>
+                    <h3>Progress Analytics</h3>
+                    <p>Detailed insights into your learning patterns and achievements</p>
+                    <div class="resource-stats">
+                        <span><i class="fas fa-chart-line"></i> Real-time Data</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Path Detail Modal -->
+    <div class="modal" id="pathDetailModal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Path Details</h2>
+                <button class="close-btn" id="closePathModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically generated -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="closeModalBtn">Close</button>
+                <button class="btn btn-primary" id="startPathBtn">Start This Path</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Start Your Learning Journey</h2>
+                <button class="close-btn" id="closeConfirmModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-content">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Ready to begin?</h3>
+                    <p>You're about to start an exciting learning journey. We'll create your personalized dashboard and set up your progress tracking.</p>
+                    <div class="path-summary" id="selectedPathSummary">
+                        <!-- Selected path summary will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="cancelStartBtn">Not Yet</button>
+                <button class="btn btn-success" id="confirmStartBtn">
+                    <i class="fas fa-play"></i>
+                    <span>Let's Start!</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Footer (Compact) -->
+    <footer class="developer-footer footer-compact">
+        <div class="developer-container">
+            <div class="developer-info">
+                <div class="developer-avatar">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="developer-details">
+                    <h2>developed with <span class="heart-logo"></span> by Rushan Haque</h2>
+                </div>
+            </div>
+            <div class="developer-links">
+                <a href="https://www.linkedin.com/in/rushanhaque" target="_blank" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/rushanhaque" target="_blank" class="social-link github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/rushanhaque?igsh=MTN1eTBlMG45andoZw==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:rushanulhaque@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>rushanulhaque@gmail.com</span>
+                </a>
+            </div>
+            <div class="developer-logos">
+                <div class="tech-logo">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wayforge. Crafted with ❤️ by Rushan Haque</p>
+        </div>
+    </footer>
+
+    <script src="learning-paths.js"></script>
+</body>
+</html>

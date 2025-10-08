@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Assessment - Wayforge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="logo-3d">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">Wayforge</span>
+                <span class="brand-tagline">Skill Assessment</span>
+            </div>
+        </div>
+        
+        <nav class="nav-controls">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="assessment-main">
+        <!-- Assessment Header -->
+        <section class="assessment-header">
+            <div class="header-content">
+                <h1>Skill Assessment</h1>
+                <p>Evaluate your current skills and get personalized recommendations</p>
+            </div>
+            <div class="assessment-progress">
+                <div class="progress-circle">
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring-circle" stroke="#e5e7eb" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        <circle class="progress-ring-fill" stroke="#6366f1" stroke-width="8" fill="transparent" r="52" cx="60" cy="60" stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
+                    </svg>
+                    <div class="progress-text">
+                        <span class="progress-percent">0%</span>
+                        <span class="progress-label">Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Categories -->
+        <section class="assessment-categories">
+            <div class="categories-grid">
+                <div class="category-card" data-category="programming">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <p>Languages, frameworks, and development tools</p>
+                    <div class="category-stats">
+                        <span class="skill-count">0/15 Skills</span>
+                        <span class="completion-rate">0%</span>
+                    </div>
+                    <button class="btn btn-primary">Start Assessment</button>
+                </div>
+
+                <div class="category-card" data-category="design">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>UI/UX, graphic design, and creative tools</p>
+                    <div class="category-stats">
+                        <span class="skill-count">0/12 Skills</span>
+                        <span class="completion-rate">0%</span>
+                    </div>
+                    <button class="btn btn-primary">Start Assessment</button>
+                </div>
+
+                <div class="category-card" data-category="data">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Analytics, machine learning, and statistics</p>
+                    <div class="category-stats">
+                        <span class="skill-count">0/18 Skills</span>
+                        <span class="completion-rate">0%</span>
+                    </div>
+                    <button class="btn btn-primary">Start Assessment</button>
+                </div>
+
+                <div class="category-card" data-category="business">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business</h3>
+                    <p>Management, marketing, and entrepreneurship</p>
+                    <div class="category-stats">
+                        <span class="skill-count">0/10 Skills</span>
+                        <span class="completion-rate">0%</span>
+                    </div>
+                    <button class="btn btn-primary">Start Assessment</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Modal -->
+        <div class="assessment-modal" id="assessmentModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Programming Assessment</h2>
+                    <button class="close-btn" id="closeAssessment">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="assessment-content">
+                    <div class="question-progress">
+                        <span class="current-question">1</span> of <span class="total-questions">15</span>
+                    </div>
+                    
+                    <div class="question-container">
+                        <h3 class="question-title">How would you rate your JavaScript skills?</h3>
+                        <div class="skill-rating">
+                            <div class="rating-options">
+                                <label class="rating-option">
+                                    <input type="radio" name="skill-level" value="1">
+                                    <div class="option-content">
+                                        <div class="option-icon">
+                                            <i class="fas fa-seedling"></i>
+                                        </div>
+                                        <span class="option-label">Beginner</span>
+                                        <span class="option-desc">Just starting out</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="rating-option">
+                                    <input type="radio" name="skill-level" value="2">
+                                    <div class="option-content">
+                                        <div class="option-icon">
+                                            <i class="fas fa-leaf"></i>
+                                        </div>
+                                        <span class="option-label">Novice</span>
+                                        <span class="option-desc">Some experience</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="rating-option">
+                                    <input type="radio" name="skill-level" value="3">
+                                    <div class="option-content">
+                                        <div class="option-icon">
+                                            <i class="fas fa-tree"></i>
+                                        </div>
+                                        <span class="option-label">Intermediate</span>
+                                        <span class="option-desc">Comfortable with basics</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="rating-option">
+                                    <input type="radio" name="skill-level" value="4">
+                                    <div class="option-content">
+                                        <div class="option-icon">
+                                            <i class="fas fa-mountain"></i>
+                                        </div>
+                                        <span class="option-label">Advanced</span>
+                                        <span class="option-desc">Highly skilled</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="rating-option">
+                                    <input type="radio" name="skill-level" value="5">
+                                    <div class="option-content">
+                                        <div class="option-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <span class="option-label">Expert</span>
+                                        <span class="option-desc">Master level</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="assessment-actions">
+                        <button class="btn btn-outline" id="prevQuestion" disabled>Previous</button>
+                        <button class="btn btn-primary" id="nextQuestion">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2>Your Skill Profile</h2>
+                <p>Based on your assessment, here's your current skill level</p>
+            </div>
+            
+            <div class="skills-radar">
+                <canvas id="skillsChart" width="400" height="400"></canvas>
+            </div>
+            
+            <div class="recommendations">
+                <h3>Recommended Learning Paths</h3>
+                <div class="recommendations-list" id="recommendationsList">
+                    <!-- Recommendations will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="skill-assessment.js"></script>
+</body>
+</html>

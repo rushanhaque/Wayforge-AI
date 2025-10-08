@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path Questionnaire - Wayforge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="questionnaire.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header header-compact">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <div class="logo-3d">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h1 class="brand-name">Wayforge</h1>
+                    <div class="header-decorative-images">
+                        <div class="floating-icon icon-1"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="floating-icon icon-2"><i class="fas fa-lightbulb"></i></div>
+                        <div class="floating-icon icon-3"><i class="fas fa-rocket"></i></div>
+                        <div class="floating-icon icon-4"><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="brand-tagline">Forge Your Learning Journey</p>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="en">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button data-lang="en">English</button>
+                        <button data-lang="es">Español</button>
+                        <button data-lang="fr">Français</button>
+                        <button data-lang="de">Deutsch</button>
+                    </div>
+                </div>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </button>
+                    <button class="btn btn-primary" id="signupBtn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Sign Up</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="questionnaire-main">
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <span>Personal Info</span>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-circle">2</div>
+                    <span>Academic Background</span>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-circle">3</div>
+                    <span>Interests & Aspirations</span>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-circle">4</div>
+                    <span>Skills Assessment</span>
+                </div>
+                <div class="step" data-step="5">
+                    <div class="step-circle">5</div>
+                    <span>Career Goals</span>
+                </div>
+                <div class="step" data-step="6">
+                    <div class="step-circle">6</div>
+                    <span>Learning Preferences</span>
+                </div>
+                <div class="step" data-step="7">
+                    <div class="step-circle">7</div>
+                    <span>Socio-Economic Context</span>
+                </div>
+                <div class="step" data-step="8">
+                    <div class="step-circle">8</div>
+                    <span>Accessibility & Inclusion</span>
+                </div>
+                <div class="step" data-step="9">
+                    <div class="step-circle">9</div>
+                    <span>Industry Alignment</span>
+                </div>
+                <div class="step" data-step="10">
+                    <div class="step-circle">10</div>
+                    <span>Final Preferences</span>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+        </div>
+
+        <!-- Questionnaire Container -->
+        <div class="questionnaire-container">
+            <!-- Step 1: Personal Information -->
+            <div class="question-step active" id="step1">
+                <div class="step-header">
+                    <h2>Tell us about yourself</h2>
+                    <p>Let's start with some basic information to personalize your learning journey</p>
+                </div>
+                
+                <div class="question-grid">
+                    <div class="question-card">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="age">Age</label>
+                        <select id="age" required>
+                            <option value="">Select your age range</option>
+                            <option value="13-17">13-17</option>
+                            <option value="18-22">18-22</option>
+                            <option value="23-30">23-30</option>
+                            <option value="31-40">31-40</option>
+                            <option value="41-50">41-50</option>
+                            <option value="50+">50+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="education">Current Education Level</label>
+                        <select id="education" required>
+                            <option value="">Select your education level</option>
+                            <option value="high-school">High School</option>
+                            <option value="undergraduate">Undergraduate</option>
+                            <option value="graduate">Graduate</option>
+                            <option value="postgraduate">Postgraduate</option>
+                            <option value="professional">Professional Certification</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="City, Country" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Academic Background -->
+            <div class="question-step" id="step2">
+                <div class="step-header">
+                    <h2>Academic Background & Qualifications</h2>
+                    <p>Help us understand your educational foundation and prior learning experiences</p>
+                </div>
+                
+                <div class="question-grid">
+                    <div class="question-card">
+                        <label for="highestQualification">Highest Educational Qualification</label>
+                        <select id="highestQualification" required>
+                            <option value="">Select your highest qualification</option>
+                            <option value="below-10th">Below 10th Standard</option>
+                            <option value="10th-standard">10th Standard</option>
+                            <option value="12th-standard">12th Standard</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="undergraduate">Bachelor's Degree</option>
+                            <option value="postgraduate">Master's Degree</option>
+                            <option value="phd">PhD/Doctorate</option>
+                            <option value="professional">Professional Certification</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="fieldOfStudy">Field of Study/Specialization</label>
+                        <input type="text" id="fieldOfStudy" placeholder="e.g., Computer Science, Commerce, Arts" required>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="institutionType">Type of Institution</label>
+                        <select id="institutionType" required>
+                            <option value="">Select institution type</option>
+                            <option value="government">Government School/College</option>
+                            <option value="private">Private School/College</option>
+                            <option value="deemed">Deemed University</option>
+                            <option value="central">Central University</option>
+                            <option value="state">State University</option>
+                            <option value="open">Open University/Distance Learning</option>
+                            <option value="international">International Institution</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="academicPerformance">Academic Performance</label>
+                        <select id="academicPerformance" required>
+                            <option value="">Select your performance level</option>
+                            <option value="excellent">Excellent (90%+ / First Class with Distinction)</option>
+                            <option value="very-good">Very Good (75-89% / First Class)</option>
+                            <option value="good">Good (60-74% / Second Class)</option>
+                            <option value="average">Average (50-59% / Pass Class)</option>
+                            <option value="below-average">Below Average (Below 50%)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="yearOfCompletion">Year of Completion</label>
+                        <select id="yearOfCompletion" required>
+                            <option value="">Select year</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="before-2015">Before 2015</option>
+                            <option value="pursuing">Currently Pursuing</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="additionalCertifications">Additional Certifications/Courses</label>
+                        <textarea id="additionalCertifications" placeholder="List any additional certifications, online courses, or professional training you've completed" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="nsqfLevel">NSQF (National Skills Qualifications Framework) Level</label>
+                        <select id="nsqfLevel">
+                            <option value="">Select NSQF Level (if applicable)</option>
+                            <option value="level-1">Level 1 (Class V)</option>
+                            <option value="level-2">Level 2 (Class VIII)</option>
+                            <option value="level-3">Level 3 (Class X)</option>
+                            <option value="level-4">Level 4 (Class XII)</option>
+                            <option value="level-5">Level 5 (Certificate/Diploma)</option>
+                            <option value="level-6">Level 6 (Advanced Diploma/Bachelor's)</option>
+                            <option value="level-7">Level 7 (Bachelor's Degree)</option>
+                            <option value="level-8">Level 8 (Postgraduate Diploma/Master's)</option>
+                            <option value="level-9">Level 9 (Master's Degree)</option>
+                            <option value="level-10">Level 10 (Doctoral Degree)</option>
+                            <option value="not-sure">Not Sure</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="learningGaps">Learning Gaps or Challenges</label>
+                        <textarea id="learningGaps" placeholder="Describe any learning gaps, challenges, or areas where you feel you need additional support" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Interests & Aspirations -->
+            <div class="question-step" id="step3">
+                <div class="step-header">
+                    <h2>Interests & Career Aspirations</h2>
+                    <p>Tell us about your interests, passions, and what drives you professionally</p>
+                </div>
+                
+                <div class="interests-grid">
+                    <div class="interest-category">
+                        <h3><i class="fas fa-laptop-code"></i> Technology & IT</h3>
+                        <div class="interest-options">
+                            <label class="interest-option">
+                                <input type="checkbox" value="programming">
+                                <span>Programming & Software Development</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="ai-ml">
+                                <span>AI & Machine Learning</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="web-development">
+                                <span>Web Development</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="mobile-development">
+                                <span>Mobile App Development</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="cybersecurity">
+                                <span>Cybersecurity</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="data-science">
+                                <span>Data Science & Analytics</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="cloud-computing">
+                                <span>Cloud Computing</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="blockchain">
+                                <span>Blockchain Technology</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="iot">
+                                <span>Internet of Things (IoT)</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="devops">
+                                <span>DevOps & System Administration</span>
+                            </label>
+                        </div>
+                        <div class="others-input">
+                            <input type="text" id="techOthers" placeholder="Other technology interests...">
+                        </div>
+                    </div>
+                    
+                    <div class="interest-category">
+                        <h3><i class="fas fa-chart-line"></i> Business & Management</h3>
+                        <div class="interest-options">
+                            <label class="interest-option">
+                                <input type="checkbox" value="digital-marketing">
+                                <span>Digital Marketing</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="finance-banking">
+                                <span>Finance & Banking</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="entrepreneurship">
+                                <span>Entrepreneurship</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="project-management">
+                                <span>Project Management</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="human-resources">
+                                <span>Human Resources</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="supply-chain">
+                                <span>Supply Chain Management</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="business-analytics">
+                                <span>Business Analytics</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="sales">
+                                <span>Sales & Customer Relations</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="consulting">
+                                <span>Business Consulting</span>
+                            </label>
+                        </div>
+                        <div class="others-input">
+                            <input type="text" id="businessOthers" placeholder="Other business interests...">
+                        </div>
+                    </div>
+                    
+                    <div class="interest-category">
+                        <h3><i class="fas fa-palette"></i> Creative & Design</h3>
+                        <div class="interest-options">
+                            <label class="interest-option">
+                                <input type="checkbox" value="graphic-design">
+                                <span>Graphic Design</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="ui-ux-design">
+                                <span>UI/UX Design</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="photography">
+                                <span>Photography & Videography</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="content-writing">
+                                <span>Content Writing & Copywriting</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="animation">
+                                <span>Animation & VFX</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="music-production">
+                                <span>Music Production</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="fashion-design">
+                                <span>Fashion Design</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="interior-design">
+                                <span>Interior Design</span>
+                            </label>
+                        </div>
+                        <div class="others-input">
+                            <input type="text" id="creativeOthers" placeholder="Other creative interests...">
+                        </div>
+                    </div>
+                    
+                    <div class="interest-category">
+                        <h3><i class="fas fa-flask"></i> Science & Research</h3>
+                        <div class="interest-options">
+                            <label class="interest-option">
+                                <input type="checkbox" value="biotechnology">
+                                <span>Biotechnology</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="pharmaceutical">
+                                <span>Pharmaceutical Sciences</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="environmental-science">
+                                <span>Environmental Science</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="renewable-energy">
+                                <span>Renewable Energy</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="medical-research">
+                                <span>Medical Research</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="space-technology">
+                                <span>Space Technology</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="materials-science">
+                                <span>Materials Science</span>
+                            </label>
+                        </div>
+                        <div class="others-input">
+                            <input type="text" id="scienceOthers" placeholder="Other science interests...">
+                        </div>
+                    </div>
+                    
+                    <div class="interest-category">
+                        <h3><i class="fas fa-graduation-cap"></i> Education & Training</h3>
+                        <div class="interest-options">
+                            <label class="interest-option">
+                                <input type="checkbox" value="teaching">
+                                <span>Teaching & Education</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="corporate-training">
+                                <span>Corporate Training</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="educational-technology">
+                                <span>Educational Technology</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="curriculum-development">
+                                <span>Curriculum Development</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="skill-development">
+                                <span>Skill Development Programs</span>
+                            </label>
+                        </div>
+                        <div class="others-input">
+                            <input type="text" id="educationOthers" placeholder="Other education interests...">
+                        </div>
+                    </div>
+                    
+                    <div class="interest-category">
+                        <h3><i class="fas fa-hands-helping"></i> Social Impact & Services</h3>
+                        <div class="interest-options">
+                            <label class="interest-option">
+                                <input type="checkbox" value="social-work">
+                                <span>Social Work</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="healthcare">
+                                <span>Healthcare Services</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="public-policy">
+                                <span>Public Policy</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="ngo-work">
+                                <span>NGO & Non-profit Work</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="community-development">
+                                <span>Community Development</span>
+                            </label>
+                            <label class="interest-option">
+                                <input type="checkbox" value="mental-health">
+                                <span>Mental Health & Counseling</span>
+                            </label>
+                        </div>
+                        <div class="others-input">
+                            <input type="text" id="socialOthers" placeholder="Other social impact interests...">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="aspirations-section">
+                    <div class="question-card full-width">
+                        <label for="careerAspirations">Career Aspirations & Vision</label>
+                        <textarea id="careerAspirations" placeholder="Describe your long-term career vision, what impact you want to make, and where you see yourself in 5-10 years" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="roleModels">Professional Role Models or Inspirations</label>
+                        <textarea id="roleModels" placeholder="Who inspires you professionally? What qualities or achievements do you admire?" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Skills Assessment -->
+            <div class="question-step" id="step4">
+                <div class="step-header">
+                    <h2>Comprehensive Skills Assessment</h2>
+                    <p>Rate your proficiency in different areas to help us assess your starting point and identify growth opportunities</p>
+                </div>
+                
+                <div class="skills-assessment">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Programming & Software Development</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="programming">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Data Analysis & Statistics</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="data-analysis">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>AI & Machine Learning</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="ai-ml">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Cloud Computing & DevOps</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="cloud-devops">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Cybersecurity</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="cybersecurity">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="others-input">
+                            <label for="technicalSkillsOthers">Other Technical Skills:</label>
+                            <input type="text" id="technicalSkillsOthers" placeholder="List any other technical skills you have...">
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-palette"></i> Creative & Design Skills</h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Graphic Design & Visual Arts</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="graphic-design">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>UI/UX Design</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="ui-ux">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Content Creation & Writing</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="content-creation">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Photography & Videography</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="photography">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="others-input">
+                            <label for="creativeSkillsOthers">Other Creative Skills:</label>
+                            <input type="text" id="creativeSkillsOthers" placeholder="List any other creative skills you have...">
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-chart-line"></i> Business & Management Skills</h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Project Management</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="project-management">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Digital Marketing</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="digital-marketing">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Financial Analysis & Accounting</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="finance">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Sales & Customer Relations</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="sales">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="others-input">
+                            <label for="businessSkillsOthers">Other Business Skills:</label>
+                            <input type="text" id="businessSkillsOthers" placeholder="List any other business skills you have...">
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-users"></i> Soft Skills & Communication</h3>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Communication & Presentation</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="communication">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Leadership & Team Management</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="leadership">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Problem Solving & Critical Thinking</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="problem-solving">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Adaptability & Learning Agility</span>
+                                <span class="skill-level-text">None</span>
+                            </div>
+                            <div class="skill-slider">
+                                <input type="range" min="0" max="4" value="0" class="slider" data-skill="adaptability">
+                                <div class="slider-labels">
+                                    <span>None</span>
+                                    <span>Beginner</span>
+                                    <span>Intermediate</span>
+                                    <span>Advanced</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="others-input">
+                            <label for="softSkillsOthers">Other Soft Skills:</label>
+                            <input type="text" id="softSkillsOthers" placeholder="List any other soft skills you have...">
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-language"></i> Language Skills</h3>
+                        
+                        <div class="language-skills">
+                            <div class="question-card">
+                                <label for="nativeLanguage">Native Language(s)</label>
+                                <input type="text" id="nativeLanguage" placeholder="e.g., Hindi, English, Tamil" required>
+                            </div>
+                            
+                            <div class="question-card">
+                                <label for="englishProficiency">English Proficiency</label>
+                                <select id="englishProficiency" required>
+                                    <option value="">Select proficiency level</option>
+                                    <option value="native">Native Speaker</option>
+                                    <option value="fluent">Fluent</option>
+                                    <option value="advanced">Advanced</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="basic">Basic</option>
+                                    <option value="none">No English</option>
+                                </select>
+                            </div>
+                            
+                            <div class="question-card">
+                                <label for="otherLanguages">Other Languages</label>
+                                <textarea id="otherLanguages" placeholder="List other languages you speak and your proficiency level" rows="2"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5: Career Goals -->
+            <div class="question-step" id="step5">
+                <div class="step-header">
+                    <h2>Career Goals & Aspirations</h2>
+                    <p>Define your career objectives and professional aspirations</p>
+                </div>
+                
+                <div class="goals-section">
+                    <div class="question-card full-width">
+                        <label for="careerGoal">Primary Career Goal</label>
+                        <select id="careerGoal" required>
+                            <option value="">Select your primary goal</option>
+                            <option value="career-change">Career Change</option>
+                            <option value="skill-upgrade">Skill Upgrade</option>
+                            <option value="promotion">Get Promoted</option>
+                            <option value="freelance">Start Freelancing</option>
+                            <option value="entrepreneurship">Start a Business</option>
+                            <option value="academic">Academic Advancement</option>
+                            <option value="personal-growth">Personal Growth</option>
+                            <option value="get-a-job">Get a Job</option>
+                            <option value="first-internship">Get an Internship</option>
+                            <option value="switch-industry">Switch Industry</option>
+                            <option value="study-abroad">Study Abroad</option>
+                            <option value="build-portfolio">Build Strong Portfolio</option>
+                            <option value="get-certifications">Earn Certifications</option>
+                            <option value="networking">Grow Professional Network</option>
+                            <option value="public-speaking">Improve Public Speaking</option>
+                            <option value="leadership-role">Move into Leadership</option>
+                            <option value="remote-work">Transition to Remote Work</option>
+                            <option value="increase-salary">Increase Salary</option>
+                            <option value="launch-product">Launch a Product</option>
+                            <option value="research-role">Enter Research/PhD Track</option>
+                            <option value="teach-train">Become a Trainer/Mentor</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="timeframe">Desired Timeframe</label>
+                        <select id="timeframe" required>
+                            <option value="">Select timeframe</option>
+                            <option value="3-months">3 Months</option>
+                            <option value="6-months">6 Months</option>
+                            <option value="1-year">1 Year</option>
+                            <option value="2-years">2 Years</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="dreamJob">Dream Job/Role</label>
+                        <input type="text" id="dreamJob" placeholder="e.g., Software Engineer, Data Scientist, UX Designer" required>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="motivation">What motivates you most?</label>
+                        <textarea id="motivation" placeholder="Tell us what drives you to learn and grow..." rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6: Learning Preferences -->
+            <div class="question-step" id="step6">
+                <div class="step-header">
+                    <h2>Learning Preferences & Style</h2>
+                    <p>Help us customize your learning experience based on your preferences</p>
+                </div>
+                
+                <div class="preferences-grid">
+                    <div class="preference-card">
+                        <h3>Learning Style</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="learningStyle" value="visual">
+                                <div class="option-content">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Visual</span>
+                                    <small>Videos, diagrams, infographics</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="learningStyle" value="auditory">
+                                <div class="option-content">
+                                    <i class="fas fa-headphones"></i>
+                                    <span>Auditory</span>
+                                    <small>Podcasts, lectures, discussions</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="learningStyle" value="hands-on">
+                                <div class="option-content">
+                                    <i class="fas fa-hands"></i>
+                                    <span>Hands-on</span>
+                                    <small>Projects, labs, practice</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="learningStyle" value="reading">
+                                <div class="option-content">
+                                    <i class="fas fa-book"></i>
+                                    <span>Reading</span>
+                                    <small>Articles, books, documentation</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="preference-card">
+                        <h3>Time Commitment</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="timeCommitment" value="1-2-hours">
+                                <div class="option-content">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1-2 hours/day</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="timeCommitment" value="3-4-hours">
+                                <div class="option-content">
+                                    <i class="fas fa-clock"></i>
+                                    <span>3-4 hours/day</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="timeCommitment" value="5-plus-hours">
+                                <div class="option-content">
+                                    <i class="fas fa-clock"></i>
+                                    <span>5+ hours/day</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="timeCommitment" value="weekends-only">
+                                <div class="option-content">
+                                    <i class="fas fa-calendar-weekend"></i>
+                                    <span>Weekends only</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="preference-card">
+                        <h3>Difficulty Level</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="difficulty" value="beginner-friendly">
+                                <div class="option-content">
+                                    <i class="fas fa-seedling"></i>
+                                    <span>Beginner Friendly</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="difficulty" value="challenging">
+                                <div class="option-content">
+                                    <i class="fas fa-mountain"></i>
+                                    <span>Challenging</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="difficulty" value="expert-level">
+                                <div class="option-content">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Expert Level</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="preference-card">
+                        <h3>Budget Range</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="budget" value="free">
+                                <div class="option-content">
+                                    <i class="fas fa-gift"></i>
+                                    <span>Free Resources</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="budget" value="low-cost">
+                                <div class="option-content">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$0-50/month</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="budget" value="moderate">
+                                <div class="option-content">
+                                    <i class="fas fa-coins"></i>
+                                    <span>$50-200/month</span>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="budget" value="premium">
+                                <div class="option-content">
+                                    <i class="fas fa-gem"></i>
+                                    <span>$200+/month</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7: Socio-Economic Context -->
+            <div class="question-step" id="step7">
+                <div class="step-header">
+                    <h2>Socio-Economic Context</h2>
+                    <p>Help us understand your background to provide relevant opportunities</p>
+                </div>
+                
+                <div class="question-grid">
+                    <div class="question-card">
+                        <label for="employmentStatus">Current Employment Status</label>
+                        <select id="employmentStatus" required>
+                            <option value="">Select your status</option>
+                            <option value="student">Student</option>
+                            <option value="employed-full-time">Employed (Full-time)</option>
+                            <option value="employed-part-time">Employed (Part-time)</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="homemaker">Homemaker</option>
+                            <option value="retired">Retired</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="householdIncome">Household Income Range (Annual)</label>
+                        <select id="householdIncome">
+                            <option value="">Select range (optional)</option>
+                            <option value="below-2-lakh">Below ₹2 Lakh</option>
+                            <option value="2-5-lakh">₹2-5 Lakh</option>
+                            <option value="5-10-lakh">₹5-10 Lakh</option>
+                            <option value="10-20-lakh">₹10-20 Lakh</option>
+                            <option value="20-50-lakh">₹20-50 Lakh</option>
+                            <option value="above-50-lakh">Above ₹50 Lakh</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="geographicLocation">Geographic Context</label>
+                        <select id="geographicLocation" required>
+                            <option value="">Select your area type</option>
+                            <option value="metro-city">Metro City</option>
+                            <option value="tier-1-city">Tier 1 City</option>
+                            <option value="tier-2-city">Tier 2 City</option>
+                            <option value="tier-3-city">Tier 3 City</option>
+                            <option value="rural-area">Rural Area</option>
+                            <option value="international">International</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="internetAccess">Internet Access Quality</label>
+                        <select id="internetAccess" required>
+                            <option value="">Select internet quality</option>
+                            <option value="high-speed">High-speed Broadband</option>
+                            <option value="moderate-speed">Moderate Speed</option>
+                            <option value="mobile-data">Mobile Data Only</option>
+                            <option value="limited-access">Limited Access</option>
+                            <option value="unreliable">Unreliable Connection</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="learningBarriers">Learning Barriers or Challenges</label>
+                        <textarea id="learningBarriers" placeholder="Describe any barriers you face in learning (time, resources, family responsibilities, etc.)" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8: Accessibility & Inclusion -->
+            <div class="question-step" id="step8">
+                <div class="step-header">
+                    <h2>Accessibility & Inclusion</h2>
+                    <p>Ensure we provide an inclusive learning experience for everyone</p>
+                </div>
+                
+                <div class="question-grid">
+                    <div class="question-card">
+                        <label for="accessibilityNeeds">Accessibility Requirements</label>
+                        <select id="accessibilityNeeds">
+                            <option value="">Select if applicable</option>
+                            <option value="none">No special requirements</option>
+                            <option value="visual-impairment">Visual impairment support</option>
+                            <option value="hearing-impairment">Hearing impairment support</option>
+                            <option value="motor-disability">Motor disability support</option>
+                            <option value="cognitive-support">Cognitive learning support</option>
+                            <option value="multiple">Multiple requirements</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="preferredLanguage">Preferred Learning Language</label>
+                        <select id="preferredLanguage" required>
+                            <option value="">Select preferred language</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="marathi">Marathi</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="gujarati">Gujarati</option>
+                            <option value="urdu">Urdu</option>
+                            <option value="kannada">Kannada</option>
+                            <option value="odia">Odia</option>
+                            <option value="punjabi">Punjabi</option>
+                            <option value="malayalam">Malayalam</option>
+                            <option value="assamese">Assamese</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="culturalConsiderations">Cultural Considerations</label>
+                        <select id="culturalConsiderations">
+                            <option value="">Select if applicable</option>
+                            <option value="none">No specific considerations</option>
+                            <option value="religious-considerations">Religious considerations</option>
+                            <option value="gender-specific-needs">Gender-specific needs</option>
+                            <option value="family-obligations">Family obligations</option>
+                            <option value="community-support">Community support preferred</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="supportSystem">Available Support System</label>
+                        <select id="supportSystem">
+                            <option value="">Select your support level</option>
+                            <option value="strong-family-support">Strong family support</option>
+                            <option value="moderate-support">Moderate support</option>
+                            <option value="limited-support">Limited support</option>
+                            <option value="independent-learner">Independent learner</option>
+                            <option value="need-mentorship">Need mentorship</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="inclusionNeeds">Additional Inclusion Needs</label>
+                        <textarea id="inclusionNeeds" placeholder="Describe any additional support or accommodations you need for effective learning" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 9: Industry Alignment -->
+            <div class="question-step" id="step9">
+                <div class="step-header">
+                    <h2>Industry Alignment & Market Intelligence</h2>
+                    <p>Align your learning with current industry demands and future trends</p>
+                </div>
+                
+                <div class="question-grid">
+                    <div class="question-card">
+                        <label for="targetIndustry">Target Industry</label>
+                        <select id="targetIndustry" required>
+                            <option value="">Select target industry</option>
+                            <option value="information-technology">Information Technology</option>
+                            <option value="healthcare">Healthcare & Life Sciences</option>
+                            <option value="finance-banking">Finance & Banking</option>
+                            <option value="education">Education & Training</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="retail-ecommerce">Retail & E-commerce</option>
+                            <option value="media-entertainment">Media & Entertainment</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="renewable-energy">Renewable Energy</option>
+                            <option value="agriculture">Agriculture & Food Tech</option>
+                            <option value="government-public">Government & Public Sector</option>
+                            <option value="startup-ecosystem">Startup Ecosystem</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="non-profit">Non-profit & Social Impact</option>
+                            <option value="multiple">Multiple Industries</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="jobMarketAwareness">Job Market Awareness</label>
+                        <select id="jobMarketAwareness" required>
+                            <option value="">Select your awareness level</option>
+                            <option value="very-aware">Very aware of market trends</option>
+                            <option value="somewhat-aware">Somewhat aware</option>
+                            <option value="limited-awareness">Limited awareness</option>
+                            <option value="need-guidance">Need guidance on market trends</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="emergingTechInterest">Interest in Emerging Technologies</label>
+                        <select id="emergingTechInterest">
+                            <option value="">Select interest level</option>
+                            <option value="very-interested">Very interested</option>
+                            <option value="moderately-interested">Moderately interested</option>
+                            <option value="slightly-interested">Slightly interested</option>
+                            <option value="not-interested">Not interested</option>
+                            <option value="unsure">Unsure</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card">
+                        <label for="workPreference">Work Environment Preference</label>
+                        <select id="workPreference">
+                            <option value="">Select preference</option>
+                            <option value="remote-work">Remote Work</option>
+                            <option value="hybrid-work">Hybrid Work</option>
+                            <option value="office-based">Office-based</option>
+                            <option value="freelance">Freelance/Contract</option>
+                            <option value="entrepreneurship">Entrepreneurship</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="industryGoals">Industry-Specific Goals</label>
+                        <textarea id="industryGoals" placeholder="Describe your specific goals within your target industry and how you want to contribute" rows="3" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 10: Final Preferences -->
+            <div class="question-step" id="step10">
+                <div class="step-header">
+                    <h2>Final Preferences & Customization</h2>
+                    <p>Last step! Fine-tune your learning experience preferences</p>
+                </div>
+                
+                <div class="preferences-grid">
+                    <div class="preference-card">
+                        <h3>Learning Pace</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="learningPace" value="self-paced">
+                                <div class="option-content">
+                                    <i class="fas fa-user-clock"></i>
+                                    <span>Self-Paced</span>
+                                    <small>Learn at your own speed</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="learningPace" value="structured">
+                                <div class="option-content">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Structured</span>
+                                    <small>Fixed schedule and deadlines</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="learningPace" value="intensive">
+                                <div class="option-content">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Intensive</span>
+                                    <small>Fast-track learning</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="preference-card">
+                        <h3>Certification Priority</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="certificationPriority" value="high">
+                                <div class="option-content">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>High Priority</span>
+                                    <small>Focus on certifications</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="certificationPriority" value="moderate">
+                                <div class="option-content">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <span>Moderate</span>
+                                    <small>Balance skills and certificates</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="certificationPriority" value="low">
+                                <div class="option-content">
+                                    <i class="fas fa-brain"></i>
+                                    <span>Skills Focus</span>
+                                    <small>Practical skills over certificates</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="preference-card">
+                        <h3>Mentorship Preference</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="mentorshipPreference" value="one-on-one">
+                                <div class="option-content">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>One-on-One</span>
+                                    <small>Personal mentor</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="mentorshipPreference" value="group">
+                                <div class="option-content">
+                                    <i class="fas fa-users"></i>
+                                    <span>Group Mentoring</span>
+                                    <small>Learn with peers</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="mentorshipPreference" value="self-guided">
+                                <div class="option-content">
+                                    <i class="fas fa-compass"></i>
+                                    <span>Self-Guided</span>
+                                    <small>Independent learning</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="preference-card">
+                        <h3>Progress Tracking</h3>
+                        <div class="preference-options">
+                            <label class="preference-option">
+                                <input type="radio" name="progressTracking" value="detailed">
+                                <div class="option-content">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Detailed Analytics</span>
+                                    <small>Comprehensive tracking</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="progressTracking" value="simple">
+                                <div class="option-content">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Simple Progress</span>
+                                    <small>Basic completion tracking</small>
+                                </div>
+                            </label>
+                            <label class="preference-option">
+                                <input type="radio" name="progressTracking" value="gamified">
+                                <div class="option-content">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>Gamified</span>
+                                    <small>Badges and achievements</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="final-preferences">
+                    <div class="question-card full-width">
+                        <label for="additionalRequirements">Additional Requirements or Preferences</label>
+                        <textarea id="additionalRequirements" placeholder="Any other specific requirements, preferences, or goals you'd like us to consider?" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="question-card full-width">
+                        <label for="successMetrics">How do you define success in your learning journey?</label>
+                        <textarea id="successMetrics" placeholder="Describe what success looks like for you (job placement, skill mastery, salary increase, etc.)" rows="3" required></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button class="btn btn-outline" id="prevBtn" style="display: none;">
+                <i class="fas fa-arrow-left"></i>
+                <span>Previous</span>
+            </button>
+            
+            <button class="btn btn-primary" id="nextBtn">
+                <span>Next</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            
+            <button class="btn btn-success" id="generateBtn" style="display: none;">
+                <i class="fas fa-magic"></i>
+                <span>Generate My Learning Paths</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Developer Footer (Compact) -->
+    <footer class="developer-footer footer-compact">
+        <div class="developer-container">
+            <div class="developer-info">
+                <div class="developer-avatar">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="developer-details">
+                    <h2>developed with <span class="heart-logo"></span> by Rushan Haque</h2>
+                </div>
+            </div>
+            <div class="developer-links">
+                <a href="https://www.linkedin.com/in/rushanhaque" target="_blank" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/rushanhaque" target="_blank" class="social-link github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/rushanhaque?igsh=MTN1eTBlMG45andoZw==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:rushanulhaque@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>rushanulhaque@gmail.com</span>
+                </a>
+            </div>
+            <div class="developer-logos">
+                <div class="tech-logo">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wayforge. Crafted with ❤️ by Rushan Haque</p>
+        </div>
+    </footer>
+
+    <script src="questionnaire.js"></script>
+    <script src="api-client.js"></script>
+</body>
+</html>

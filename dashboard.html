@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Wayforge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="logo-3d">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">Wayforge</span>
+                <span class="brand-tagline">Your Learning Dashboard</span>
+            </div>
+        </div>
+        
+        <nav class="nav-controls">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="learning-paths.html" class="nav-link">
+                    <i class="fas fa-route"></i>
+                    <span>Paths</span>
+                </a>
+                <a href="dashboard.html" class="nav-link active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            
+            <div class="auth-controls">
+                <button class="btn btn-outline" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Login</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome back, <span class="user-name">Learner</span>!</h1>
+                <p>Continue your learning journey and track your progress</p>
+            </div>
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Day Streak</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Achievements</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">45h</span>
+                        <span class="stat-label">Total Time</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Learning Paths -->
+        <section class="current-paths-section">
+            <h2>Your Learning Paths</h2>
+            <div class="paths-grid">
+                <div class="path-card active">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="path-info">
+                            <h3>Full-Stack JavaScript</h3>
+                            <p>Frontend & Backend Development</p>
+                        </div>
+                        <div class="path-progress">
+                            <span>68%</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 68%"></div>
+                    </div>
+                    <div class="path-actions">
+                        <button class="btn btn-primary btn-sm">Continue</button>
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                    </div>
+                </div>
+
+                <div class="path-card">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="path-info">
+                            <h3>Data Science Fundamentals</h3>
+                            <p>Python, Statistics & ML</p>
+                        </div>
+                        <div class="path-progress">
+                            <span>34%</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 34%"></div>
+                    </div>
+                    <div class="path-actions">
+                        <button class="btn btn-primary btn-sm">Continue</button>
+                        <button class="btn btn-outline btn-sm">View Details</button>
+                    </div>
+                </div>
+
+                <div class="path-card new">
+                    <div class="path-header">
+                        <div class="path-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="path-info">
+                            <h3>Start New Path</h3>
+                            <p>Discover new learning opportunities</p>
+                        </div>
+                    </div>
+                    <div class="path-actions">
+                        <button class="btn btn-primary btn-sm" onclick="window.location.href='questionnaire.html'">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="activity-section">
+            <div class="activity-container">
+                <div class="activity-feed">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Completed: React Hooks Module</h4>
+                                <p>Full-Stack JavaScript Path</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Achievement Unlocked: Quick Learner</h4>
+                                <p>Completed 5 modules in one day</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Quiz Score: 95%</h4>
+                                <p>JavaScript Fundamentals Quiz</p>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-panel">
+                    <h2>Achievements</h2>
+                    <div class="achievements-grid">
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-fire"></i>
+                            <span>Week Streak</span>
+                        </div>
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>First Module</span>
+                        </div>
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-rocket"></i>
+                            <span>Quick Start</span>
+                        </div>
+                        <div class="achievement-badge">
+                            <i class="fas fa-crown"></i>
+                            <span>Path Master</span>
+                        </div>
+                        <div class="achievement-badge">
+                            <i class="fas fa-medal"></i>
+                            <span>Top Scorer</span>
+                        </div>
+                        <div class="achievement-badge">
+                            <i class="fas fa-users"></i>
+                            <span>Community Helper</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="recommendations-section">
+            <h2>Recommended for You</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <div class="rec-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>Advanced React Patterns</h3>
+                    <p>Take your React skills to the next level</p>
+                    <div class="rec-meta">
+                        <span><i class="fas fa-clock"></i> 8 hours</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Explore</button>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="rec-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Design</h3>
+                    <p>Master SQL and database optimization</p>
+                    <div class="rec-meta">
+                        <span><i class="fas fa-clock"></i> 12 hours</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Explore</button>
+                </div>
+
+                <div class="recommendation-card">
+                    <div class="rec-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>Build cross-platform mobile apps</p>
+                    <div class="rec-meta">
+                        <span><i class="fas fa-clock"></i> 15 hours</span>
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm">Explore</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="api-client.js"></script>
+</body>
+</html>

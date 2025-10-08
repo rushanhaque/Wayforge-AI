@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayforge - Your Learning Path Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <div class="logo-3d">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h1 class="brand-name">Wayforge</h1>
+                    <div class="header-decorative-images">
+                        <div class="floating-icon icon-1"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="floating-icon icon-2"><i class="fas fa-lightbulb"></i></div>
+                        <div class="floating-icon icon-3"><i class="fas fa-rocket"></i></div>
+                        <div class="floating-icon icon-4"><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="brand-tagline">Forge Your Learning Journey</p>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="en">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button data-lang="en">English</button>
+                        <button data-lang="es">Español</button>
+                        <button data-lang="fr">Français</button>
+                        <button data-lang="de">Deutsch</button>
+                    </div>
+                </div>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </button>
+                    <button class="btn btn-primary" id="signupBtn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Sign Up</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="main-actions">
+                    <button class="main-btn start-planning-btn" id="startPlanningBtn">
+                        <div class="btn-3d-effect">
+                            <i class="fas fa-rocket"></i>
+                            <span>Start Planning</span>
+                            <div class="btn-glow"></div>
+                        </div>
+                    </button>
+                    
+                    <button class="main-btn continue-pathway-btn" id="continuePathwayBtn">
+                        <div class="btn-3d-effect">
+                            <i class="fas fa-play"></i>
+                            <span>Continue Pathway</span>
+                            <div class="btn-glow"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <div class="progress-container">
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Learning Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="68"></div>
+                        </div>
+                        <span class="progress-text">68% Complete</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Time Spent</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="45"></div>
+                        </div>
+                        <span class="progress-text">127 Hours</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Achievements</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="82"></div>
+                        </div>
+                        <span class="progress-text">15 Unlocked</span>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Goals Met</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="91"></div>
+                        </div>
+                        <span class="progress-text">12 of 13</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="features-section">
+            <div class="features-container">
+                <div class="feature-card" data-feature="resource-hub">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop" alt="Colorful books and learning resources">
+                        <div class="card-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Resource Hub</h3>
+                        <p>Access curated learning materials and resources</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="interactive-quizzes">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1200&auto=format&fit=crop" alt="Interactive quizzes and question marks">
+                        <div class="card-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>Interactive Quizzes</h3>
+                        <p>Test your knowledge with engaging quizzes</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="exploration-mode">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Colorful compass and exploration map">
+                        <div class="card-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <h3>Exploration Mode</h3>
+                        <p>Discover new learning opportunities</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="resume-builder">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1200&auto=format&fit=crop" alt="Resume building with paper and laptop">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Resume Builder</h3>
+                        <p>Create professional resumes with AI assistance</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="career-trends">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop" alt="Colorful analytics charts and career trends">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Career Trends</h3>
+                        <p>Stay updated with industry trends and insights</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="guidance-dashboard">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?q=80&w=1200&auto=format&fit=crop" alt="Colorful mentorship and guidance visuals">
+                        <div class="card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Guidance Dashboard</h3>
+                        <p>Get personalized career guidance and mentorship</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="career-compass">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=1200&auto=format&fit=crop" alt="Compass for career direction">
+                        <div class="card-icon">
+                            <i class="fas fa-location-arrow"></i>
+                        </div>
+                        <h3>Career Compass</h3>
+                        <p>Navigate your career path with precision</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="market-conditions">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Market analytics and charts">
+                        <div class="card-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Market Conditions</h3>
+                        <p>Real-time job market analysis and opportunities</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="what-if-simulator">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=1200&auto=format&fit=crop" alt="What-if scenarios and experiments">
+                        <div class="card-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>What-If Simulator</h3>
+                        <p>Simulate different career scenarios and outcomes</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="gamified-experience">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1200&auto=format&fit=crop" alt="Gamified learning and controllers">
+                        <div class="card-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gamified Experience</h3>
+                        <p>Learn through engaging games and challenges</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="skill-assessment">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1518085250887-2f903c200fee?q=80&w=1200&auto=format&fit=crop" alt="Assessment checklist and documents">
+                        <div class="card-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Skill Assessment</h3>
+                        <p>Evaluate your skills and get personalized recommendations</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-feature="dashboard">
+                    <div class="card-3d">
+                        <img class="card-image" loading="lazy" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Analytics dashboard and charts">
+                        <div class="card-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Learning Dashboard</h3>
+                        <p>Track your progress and manage your learning journey</p>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <button class="close-btn" id="closeLoginModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Join Wayforge</h2>
+                <button class="close-btn" id="closeSignupModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Developer Footer -->
+    <footer class="developer-footer">
+        <div class="developer-container">
+            <div class="developer-info">
+                <div class="developer-avatar">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="developer-details">
+                    <h2>developed with <span class="heart-logo"></span> by Rushan Haque</h2>
+                </div>
+            </div>
+            <div class="developer-links">
+                <a href="https://www.linkedin.com/in/rushanhaque" target="_blank" class="social-link linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/rushanhaque" target="_blank" class="social-link github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/rushanhaque?igsh=MTN1eTBlMG45andoZw==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="mailto:rushanulhaque@gmail.com" class="social-link email">
+                    <i class="fas fa-envelope"></i>
+                    <span>rushanulhaque@gmail.com</span>
+                </a>
+            </div>
+            <div class="developer-logos">
+                <div class="tech-logo">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-logo">
+                    <i class="fab fa-node-js"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wayforge. Crafted with ❤️ by Rushan Haque</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="api-client.js"></script>
+</body>
+</html>
